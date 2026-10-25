@@ -17,9 +17,8 @@ public class LoginTest extends BaseTest {
         homePage.clickLogin();
 
         LoginPage loginPage = new LoginPage(driver);
-
-        loginPage.enterEmail("jayasree2402@gmail.com");
-        loginPage.enterPassword("Jayasree12@");
+loginPage.enterEmail(System.getenv("DEMOWEBSHOP_EMAIL"));
+loginPage.enterPassword(System.getenv("DEMOWEBSHOP_PASSWORD"));
         loginPage.clickLogin();
 
         Assert.assertTrue(
